@@ -1,0 +1,1098 @@
+/* For Poppins Font Style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Global/Standard Styles */
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: none;
+    margin: 0;
+    color: var(--c1);
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif, 'Times New Roman', Times, serif;
+    text-shadow: 0 3px 5px var(--c6);
+    user-select: none;
+}
+
+/* Costom Variables / Color Palette */
+:root {
+    --c1: #fff;
+    --c2: #000;
+    --c3: #140057;
+    --c4: #403F3F;
+    --c5: #0000ff;
+    --c6: #626666;
+}
+
+
+html {
+    background: linear-gradient(to right, var(--c3), var(--c2));
+}
+
+body {
+    padding: 0 !important;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0%;
+    z-index: 10000;
+    background: transparent;
+    backdrop-filter: blur(30px);
+    padding: 20px;
+}
+
+/*For Resposive Navigation Bar (Responsive) */
+.contain {
+    display: none;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 2px;
+    background-color: var(--c1);
+    margin: 8px 0;
+    transition: 0.4s;
+    border-radius: 0;
+    transition: .5s;
+}
+
+.bar1 .bar2 .bar3:hover {
+    box-shadow: 0 0 15px var(--c5);
+}
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+    background-color: var(--c5);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+    background-color: var(--c5);
+}
+
+.responsive-menu {
+    display: none;
+}
+
+header .weblogo {
+    display: flex;
+    align-items: center;
+}
+
+header .weblogo h1,
+.colored-text {
+    text-shadow: none;
+    font-size: clamp(20px, 4vw, 30px);
+}
+
+header .weblogo img {
+    width: clamp(25px, 8vw, 50px);
+    height: 100%;
+    margin-right: 10px;
+}
+
+header nav a {
+    font-size: 16px;
+    margin: 15px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    text-shadow: none;
+}
+
+header nav a:hover {
+    border-bottom: solid 3px var(--c5);
+    border-top: solid 3px var(--c5);
+    font-size: 20px;
+    transition: 0.3s ease;
+    text-shadow: 0 0 25px var(--c5);
+}
+
+@keyframes navani {
+    100% {
+        right: 0%;
+    }
+}
+
+header .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .buttons .signin button {
+    padding: 5px 15px;
+    font-size: clamp(13px, 6vw, 17px);
+    border-radius: 50px;
+    background: linear-gradient(to left, var(--c5), var(--c2));
+    background-size: 200% 100%;
+    border: solid 1px var(--c1);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: ease 0.7s;
+}
+
+header .buttons .signin button:hover {
+    background-position: 100% 0%;
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--c5);
+}
+
+header .button .back-btn button {
+    padding: 10px 25px;
+    font-size: clamp(13px, 6vw, 17px);
+    border-radius: 50px;
+    background: linear-gradient(to left, var(--c5), var(--c2));
+    background-size: 200% 100%;
+    border: solid 1px var(--c1);
+    cursor: pointer;
+    margin-right: 10px;
+    transition: ease 0.7s;
+}
+
+header .button .back-btn button:hover {
+    background-position: 100% 0%;
+    scale: 1.1;
+    box-shadow: 0 0 10px var(--c5);
+}
+
+.favorite {
+    cursor: pointer;
+    position: relative;
+}
+
+.favorite .item {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--c1);
+    color: var(--c5);
+    position: absolute;
+    bottom: 20%;
+    right: 0%;
+    z-index: 1;
+    font-size: 12px;
+}
+
+.colored-text {
+    color: var(--c5);
+}
+
+section,
+.overlap {
+    min-height: 100vh;
+}
+
+/* Home sectio Styles */
+.home {
+    background: url("CFliximg/CFlixBG.jpg") no-repeat;
+    background-size: cover;
+    color: var(--c1);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.home .home-text {
+    z-index: 2;
+    color: white;
+}
+
+.home .home-text h1 {
+    font-size: clamp(24px, 8vw, 75px);
+    line-height: 80px;
+    text-shadow: 0 2px 5px #0015ff;
+}
+
+.home .home-text h4 {
+    font-size: clamp(15px, 5vw, 40px);
+    margin: 20px 0;
+}
+
+.home .home-text p {
+    font-size: clamp(12px, 3vw, 20px);
+    color: var(--c1);
+}
+
+.home .home-text button {
+    padding: 12px 20px;
+    font-size: clamp(10px, 5vw, 25px);
+    border-radius: 20px;
+    background: linear-gradient(to left, var(--c5), var(--c2));
+    background-size: 200% 100%;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin-top: 20px;
+    width: clamp(200px, 8vw, 300px);
+}
+
+.home .home-text button:hover {
+    scale: 1.1;
+    background-position: 100% 0%;
+    box-shadow: 0 0 10px var(--c5);
+}
+
+.home .overlap {
+    background: radial-gradient(circle, var(--c4), var(--c2), var(--c2));
+    opacity: 0.7;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+/* About Section Styles */
+.about {
+    background: url("CFliximg/aboutbg1.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    gap: 20px;
+}
+
+.about .about-image {
+    width: 40%;
+}
+
+.about .about-image img {
+    width: 100%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.coloredtext {
+    color: var(--c5);
+    text-shadow: none;
+}
+
+.about .about-text {
+    width: 50%;
+}
+
+.about .about-text .web-title {
+    font-size: clamp(24px, 8vw, 60px);
+    font-weight: bolder;
+    text-shadow: none;
+}
+
+.about .about-text p {
+    font-size: clamp(10px, 3vw, 24px);
+    color: var(--c1);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(to left, var(--c3), var(--c2));
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 15px;
+    width: 100%;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-shadow: none;
+}
+
+.logo h1,
+.content h2 {
+    text-shadow: none;
+}
+
+footer .social-icons a i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    padding: 5px;
+    background: transparent;
+    border: 1px solid var(--c5);
+    border-radius: 50%;
+    color: var(--c5);
+    transition: 0.4s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+
+footer .social-icons a i:hover {
+    background: var(--c1);
+    color: var(--c2);
+    box-shadow: 0 0 25px var(--c5);
+    transform: scale(1.2) translatey(-10px);
+}
+
+footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+footer p,
+h2 {
+    text-align: center;
+    color: var(--c1);
+}
+
+/* Statrt of WatchList.html File Styles */
+
+/* For the items to removed the scrool bar */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    padding: 5px;
+    z-index: 1000;
+    position: fixed;
+    top: 0%;
+    background: radial-gradient(circle, var(--c2), var(--c3));
+}
+
+.search-bar img {
+    width: 50px;
+}
+
+.search-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.search-box {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    text-shadow: none;
+    color: var(--c2);
+    outline: none;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-top: 20%;
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+    background-color: white;
+    text-shadow: none;
+}
+
+.suggestion {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--c2);
+}
+
+.suggestion:hover {
+    background-color: #f1f1f1;
+}
+
+.item-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.item-image img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.label {
+    background-color: var(--c1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    width: 80%;
+    border: 1px solid var(--c2);
+    border-radius: 10px;
+    position: relative;
+}
+
+.search-bar button {
+    background-color: #5e5ef0;
+    padding: 5px;
+    color: var(--c1);
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s ease;
+}
+
+.search-bar button:hover {
+    background-color: var(--c1);
+    border: 1px solid var(--c5);
+}
+
+.search-bar button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.search-bar button a span {
+    font-size: 30px;
+    text-shadow: none;
+    transition: 0.5s ease;
+}
+
+.search-bar button a span:hover {
+    color: var(--c5);
+}
+
+.search-bar .fi {
+    width: 40px;
+    display: flex;
+    align-items: senter;
+    justify-content: center;
+}
+
+.search-content {
+    background: linear-gradient(to left, var(--c2), var(--c3));
+}
+
+.content-box {
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: end;
+    gap: 5px;
+    background: linear-gradient(to left, var(--c2), var(--c3));
+}
+
+.search-content .content-box a {
+    text-decoration: none;
+    color: var(--c1);
+}
+
+.search-content .content-box h1 {
+    text-shadow: none;
+    font-weight: 300;
+    font-size: clamp(15px, 3vw, 20px);
+}
+
+.search-content .content-box img {
+    width: clamp(100px, 30vw, 200px);
+    border-radius: 15px;
+}
+
+.search-content .content-box .trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 75, 75);
+    font-size: clamp(10px, 2vw, 15px);
+    padding: 0 5px;
+    gap: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-shadow: none;
+}
+
+/* landscape Banner Styles */
+.carousel {
+    width: 70%;
+    margin: auto;
+    height: 50%;
+    margin-bottom: 15px;
+    padding-top: 80px;
+}
+
+.carousel-item {
+    height: 100%;
+}
+
+.carousel-item img {
+    border-radius: 20px;
+}
+
+.gallery .category h2 {
+    text-align: left;
+    padding-left: 130px;
+    color: rgb(127, 127, 127);
+    text-shadow: none;
+    font-size: clamp(10px, 8vw, 25px);
+}
+
+/* Styles for Movies Container */
+.gallery .category .Movies {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    overflow-x: scroll;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 20px;
+    padding-left: 5px;
+    padding-left: 5px;
+
+}
+
+.gallery .below {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery .below h6,
+p {
+    color: rgb(127, 127, 127);
+    text-shadow: none;
+}
+
+/* Styles for Movie Item */
+.gallery .category .Movies .Mitem {
+    text-align: center;
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: bolder;
+    background-color: #3c3c3c;
+}
+
+.gallery .category .Movies .Mitem a {
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+.gallery .category .Movies .Mitem img {
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.gallery .category .Movies .Mitem img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 12px var(--c5);
+    scale: 1.05;
+}
+
+.gallery .category .Movies .Mitem .Mname {
+    color: var(--c1);
+    text-shadow: none;
+    font-weight: 400;
+    font-size: clamp(10px, 2vw, 15px);
+}
+
+.gallery .category .Movies .Mitem .trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(78, 75, 75);
+    font-size: clamp(10px, 2vw, 15px);
+    padding: 5pxpx;
+    gap: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    text-shadow: none;
+    cursor: pointer;
+}
+
+.gallery .category .Movies .Mitem .trigger .watch {
+    text-shadow: none;
+    font-weight: 600;
+}
+
+.gallery .category .Movies .Mitem .trigger .i {
+    width: 25px;
+}
+
+.MovieWatch {
+    display: none;
+    background: url(CFliximg/DarkBG.png) no-repeat center;
+    background-size: cover;
+
+}
+
+.MovieWatch .comments {
+    width: 70%;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.MovieWatch .comments .comment {
+    background: transparent;
+    border-bottom: 2px solid var(--c5);
+    border-top: 2px solid #49494916;
+    border-right: 2px solid #49494916;
+    border-left: 2px solid #49494916;
+    padding: 10px;
+    border-radius: 0.9375rem;
+}
+
+.MovieWatch .comments #iframebox {
+    width: clamp(100%, 15vw, 100%);
+    height: clamp(200px, 30vw, 500px);
+}
+
+.MovieWatch .ComSec {
+    height: auto;
+    overflow: auto;
+}
+
+.MovieWatch .ComSec #comments {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px;
+}
+
+.MovieWatch .ComSec #comments .comment p {
+    color: var(--c2);
+}
+
+.MovieWatch .form-group {
+    display: flex;
+    background-color: var(--c1);
+    border: 2px solid var(--c2);
+}
+
+.MovieWatch .form-group input {
+    outline: none;
+    border: none;
+    text-shadow: none;
+}
+
+.MovieWatch .rating {
+    width: 40%;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.rating h1 {
+    font-size: clamp(15px, 2vw, 24px);
+    margin-top: 10px;
+    color: var(--c5);
+    text-shadow: none;
+    font-weight: bolder;
+}
+
+.rating p {
+    font-size: clamp(12px, 2vw, 15px);
+    color: var(--c1);
+}
+
+.star-rating .star {
+    font-size: 20px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.star-rating .star.selected {
+    color: gold;
+}
+
+.MovieWatch .rating .containerpost {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 12px var(--c4);
+}
+
+.MovieWatch .rating .containerpost #poster {
+    width: clamp(100px, 15vw, 250px);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.MovieWatch .rating .Wbtn {
+    background: linear-gradient(to left, var(--c3), var(--c5));
+    border: none;
+    width: clamp(50px, 8vw, 100px);
+    padding: 7px 0;
+    font-size: clamp(5px, 2vw, 15px);
+    border-radius: 8px;
+    transition: 0.5s ease;
+}
+
+.MovieWatch .rating .Wbtn:hover {
+    scale: 1.1;
+    box-shadow: 0 0 20px var(--c5);
+}
+
+.fi {
+    position: relative;
+}
+
+.fi .Mnum {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+    display: grid;
+    place-items: center;
+    color: black;
+    position: absolute;
+    border-radius: 50%;
+    bottom: -5%;
+    right: 3%;
+    border: none;
+}
+
+.fav-container {
+    width: 45%;
+    height: 100vh;
+    top: 0%;
+    right: -1000%;
+    position: absolute;
+    display: none;
+    background-color: white;
+    animation: favconani ease-in-out 0.5s forwards;
+    overflow: scroll;
+    display: none;
+    flex-direction: column;
+}
+
+.fav-container .disapp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.fav-container .close {
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+
+.fav-container h3 {
+    margin: 10px;
+    color: var(--c5);
+    text-shadow: none;
+    font-weight: bolder;
+}
+
+@keyframes favconani {
+    100% {
+        right: 0%;
+    }
+}
+
+.fav-container .iden {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--c6);
+    display: none;
+}
+
+.flex {
+    width: 90%;
+    background: linear-gradient(45deg, var(--c3) 50%, rgb(218, 217, 219) 50%);
+    /* background-color: rgb(218, 217, 219); */
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+}
+
+.flex img {
+    width: 100px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+}
+
+.flex .Hs h3 {
+    text-shadow: 0 5px 10px var(--c2);
+}
+
+.flex button {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.container {
+    background: #dbdae0;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+    gap: 10px;
+    padding: 5px;
+    margin-top: 85px;
+}
+
+.reviewCon {
+    display: flex;
+    background: var(--c1);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    max-height: 400px;
+    overflow: auto;
+    text-align: center;
+    box-shadow: 0 3px 5px var(--c6);
+}
+
+.reviewCon img {
+    width: clamp(150px, 8vw, 359px);
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.reviewCon p b {
+    color: var(--c5);
+    font-size: clamp(15px, 2vw, 20px);
+    margin-bottom: 20px;
+    text-shadow: 0 3px 5px var(--c4);
+}
+
+.reviewCon p {
+    font-size: clamp(8px, 2vw, 12px);
+    line-height: 1.5;
+    color: var(--c2);
+}
+
+
+
+
+
+
+
+
+
+
+/* style for small screen sizes */
+@media screen and (max-width: 1000px) {
+
+    /* Header */
+    header {
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .responsive-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contain {
+        display: block;
+        background: transparent;
+        margin: 0 15px;
+    }
+
+    .navbars {
+        position: absolute;
+        top: 100%;
+        right: -40%;
+        width: 40%;
+        height: 100vh;
+        padding: 1rem;
+        background: linear-gradient(to top, var(--c3), var(--c2));
+        border: 2px solid var(--main-color);
+        display: none;
+        animation: navani 0.3s ease-in-out forwards;
+    }
+
+    .navbars a {
+        display: block;
+        font-size: 20px;
+        margin: 3rem 0;
+        color: var(--text-color);
+        transition: ease-in-out .5s;
+    }
+
+    .navbars a:hover {
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .navbars.active {
+        display: block;
+    }
+
+    header .buttons {
+        display: none;
+    }
+
+    .home .home-text h1 {
+        line-height: 50px;
+    }
+
+    /* About */
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about .about-image {
+        width: 100%;
+    }
+
+    .about .about-text {
+        width: 100%;
+        z-index: 2;
+        text-align: center;
+        margin: 5px;
+    }
+
+    .about {
+        background: url("CFliximg/aboutbg2.png") no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    /* Footer */
+    footer .content {
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    /* Carousel */
+    .carousel {
+        width: 98%;
+    }
+
+    .carousel-item {
+        height: auto;
+    }
+
+    /* For Search Bar */
+    label {
+        width: 98%;
+    }
+
+    .gallery .category h2 {
+        padding-left: 15px;
+        text-align: left;
+        color: var(--c1);
+        line-height: 20px;
+    }
+
+    .gallery .category .Movies {
+        display: grid;
+        grid-template-columns: repeat(5, 150px);
+        overflow: scroll;
+        justify-content: left;
+        gap: 15px;
+        padding-top: 10;
+        padding-bottom: 5px;
+        margin: 15px;
+        border-radius: 10px;
+        background-color: #3c3c3c;
+    }
+
+    /* Movie Names */
+    .gallery .category .Movies .Mitem .Mname {
+        color: var(--c1);
+        text-shadow: none;
+        font-weight: 400;
+        padding-top: 5px;
+    }
+
+    .gallery .category .Movies .Mitem .icon {
+        display: none;
+    }
+
+    .MovieWatch {
+        flex-direction: column;
+    }
+
+    .MovieWatch .comments {
+        width: 100%;
+    }
+
+    .MovieWatch .rating {
+        width: 100%;
+        margin-top: 0;
+        text-align: left;
+
+    }
+
+    .rating h1 {
+        text-shadow: 0 3px 5px var(--c4);
+    }
+
+    .rating p {
+        color: var(--c2);
+        text-align: justify;
+    }
+
+    .MovieWatch .rating .containerpost {
+        background-color: #919090;
+        padding: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .MovieWatch .rating .containerpost #poster {
+        float: left;
+        margin-right: 15px;
+    }
+
+    .fav-container {
+        width: 100%;
+    }
+
+}
